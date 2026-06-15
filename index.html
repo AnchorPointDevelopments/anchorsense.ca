@@ -10,91 +10,119 @@
       background: #ffffff;
       color: #1a1a1a;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      min-height: 100vh;
+    }
+    .container { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+    nav {
+      padding: 20px 0;
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 48px 24px;
+      justify-content: space-between;
+      border-bottom: 1px solid #f0f0f0;
     }
-    .container {
-      max-width: 560px;
-      width: 100%;
+    .nav-logo { font-size: 14px; font-weight: 500; color: #1a1a1a; text-decoration: none; }
+    .hero {
+      padding: 80px 0 64px;
       text-align: center;
+      border-bottom: 1px solid #f0f0f0;
     }
-    .logo {
-      width: 56px;
-      height: 56px;
+    .logo-mark {
+      width: 56px; height: 56px;
       background: #1D9E75;
       border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       margin: 0 auto 24px;
     }
-    .logo svg {
-      width: 28px;
-      height: 28px;
-      stroke: #ffffff;
-      fill: none;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
+    .logo-mark svg {
+      width: 28px; height: 28px;
+      stroke: #fff; fill: none;
+      stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
     }
     .eyebrow {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #767676;
-      margin-bottom: 8px;
+      font-size: 12px; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      color: #767676; margin-bottom: 8px;
     }
-    h1 {
-      font-size: 2rem;
-      font-weight: 500;
-      margin-bottom: 16px;
-      line-height: 1.2;
+    h1 { font-size: 2rem; font-weight: 500; margin-bottom: 16px; line-height: 1.2; }
+    .tagline { font-size: 1.1rem; color: #555; line-height: 1.6; }
+    section { padding: 48px 0; border-bottom: 1px solid #f0f0f0; }
+    h2 { font-size: 1rem; font-weight: 500; margin-bottom: 16px; }
+    p { font-size: 0.95rem; color: #555; line-height: 1.7; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px; margin-top: 24px;
     }
-    .tagline {
-      font-size: 1.1rem;
-      color: #555;
-      line-height: 1.6;
-      margin-bottom: 48px;
+    .card {
+      background: #f7f7f5;
+      border-radius: 12px;
+      padding: 20px;
     }
-    .footer {
-      border-top: 1px solid #e8e8e8;
-      padding-top: 32px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 24px;
-      flex-wrap: wrap;
+    .card-icon { font-size: 24px; color: #1D9E75; margin-bottom: 12px; display: block; }
+    .card h3 { font-size: 0.9rem; font-weight: 500; margin-bottom: 6px; color: #1a1a1a; }
+    .card p { font-size: 0.85rem; margin: 0; }
+    a { color: #1D9E75; text-decoration: none; }
+    footer {
+      padding: 24px 0;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 12px;
     }
-    .footer a, .footer span {
-      font-size: 13px;
-      color: #767676;
-      text-decoration: none;
-    }
-    .footer a:hover { color: #1a1a1a; }
+    footer span, footer a { font-size: 13px; color: #767676; }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="logo">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
-        <path d="M9.172 9.172a4 4 0 1 0 5.656 5.656"/>
-        <path d="M6.343 6.343a8 8 0 1 0 11.314 11.314"/>
-        <path d="M3.515 3.515a12 12 0 1 0 16.97 16.97"/>
-      </svg>
+
+    <div class="hero">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+          <path d="M9.172 9.172a4 4 0 1 0 5.656 5.656"/>
+          <path d="M6.343 6.343a8 8 0 1 0 11.314 11.314"/>
+          <path d="M3.515 3.515a12 12 0 1 0 16.97 16.97"/>
+        </svg>
+      </div>
+      <p class="eyebrow">Anchor Point Developments</p>
+      <h1>AnchorSense HomePro</h1>
+      <p class="tagline">Smart monitoring for tanks and storage systems.</p>
     </div>
-    <p class="eyebrow">Anchor Point Developments</p>
-    <h1>AnchorSense HomePro</h1>
-    <p class="tagline">Smart monitoring for tanks and storage systems.</p>
-    <div class="footer">
-      <a href="mailto:info@anchorpoint.ltd">info@anchorpoint.ltd</a>
-      <a href="/privacy.html">Privacy Policy</a>
+
+    <section>
+      <h2>About</h2>
+      <p>Anchor Point Developments Ltd. is a Saskatchewan-based technology company building connected monitoring solutions for residential and commercial applications. Our products help property owners track critical systems remotely, reducing the risk of unexpected failures and costly repairs.</p>
+    </section>
+
+    <section>
+      <h2>What we make</h2>
+      <div class="cards">
+        <div class="card">
+          <span class="card-icon">◎</span>
+          <h3>Tank monitoring</h3>
+          <p>Real-time level monitoring for septic, cistern, and storage tanks.</p>
+        </div>
+        <div class="card">
+          <span class="card-icon">◎</span>
+          <h3>Smart alerts</h3>
+          <p>Customizable notifications so you're always informed before problems arise.</p>
+        </div>
+        <div class="card">
+          <span class="card-icon">◎</span>
+          <h3>Mobile app</h3>
+          <p>Monitor your systems from anywhere with the AnchorSense HomePro iOS app.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>For product inquiries or support, reach us at <a href="mailto:info@anchorpoint.ltd">info@anchorpoint.ltd</a>.</p>
+      <p style="margin-top: 8px;">Anchor Point Developments Ltd. is based in Saskatoon, Saskatchewan, Canada.</p>
+    </section>
+
+    <footer>
       <span>© 2026 Anchor Point Developments Ltd.</span>
-    </div>
+      <a href="/privacy.html">Privacy Policy</a>
+    </footer>
+
   </div>
 </body>
 </html>
